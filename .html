@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha Sim ou Não</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-image: url('C:\Users\Dukaos\Downloads\HTML-Index-0.14\HTML-Index-0.14'); /* Substitua 'sua-imagem.jpg' pelo caminho da sua imagem */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 20px;
+            cursor: pointer;
+            position: relative;
+        }
+        #sim {
+            background-color: purple; /* Cor roxa */
+            color: white;
+        }
+        #nao {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>A gente consegue?</h1>
+    <div>
+        <button id="sim" onclick="alert('Você escolheu Sim!')">Sim</button>
+        <button id="nao">Não</button>
+    </div>
+
+    <script>
+        const naoButton = document.getElementById('nao');
+
+        naoButton.addEventListener('mouseover', function() {
+            const screenWidth = window.innerWidth;
+            const screenHeight = window.innerHeight;
+
+            const newX = Math.random() * (screenWidth - this.offsetWidth);
+            const newY = Math.random() * (screenHeight - this.offsetHeight);
+
+            this.style.position = 'absolute';
+            this.style.left = `${newX}px`;
+            this.style.top = `${newY}px`;
+        });
+    </script>
+</body>
+</html>
